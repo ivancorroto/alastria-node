@@ -93,7 +93,7 @@ if ( [ "update" == "$1" ]); then
     git pull
     git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"
     #glide up
-    dep ensuere
+    dep ensure
 fi
 
 if ( [ "stop" == "$1" ]); then
