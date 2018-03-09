@@ -48,7 +48,8 @@ if ( [ "build" == "$1" ]); then
     mkdir "$GOPATH"/bin
 
     echo "[*] Downloading monitor"
-    curl https://glide.sh/get | sh
+   #curl https://glide.sh/get | sh
+    curl https://raw.githubusercontent.com/golang/dep/master/install.sh | sh
     go get -d github.com/alastria/monitor
     cd "$GOPATH"/src/github.com/alastria
     
@@ -61,7 +62,8 @@ if ( [ "build" == "$1" ]); then
     go get -fix -t -u -v github.com/astaxie/beego
     go get -fix -t -u -v github.com/beego/bee
 
-    glide install
+    #glide install
+    dep init
 
     #echo "[*] Building the monitor"
     #bee pack 
