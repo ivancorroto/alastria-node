@@ -92,7 +92,8 @@ if ( [ "update" == "$1" ]); then
     cd $GOPATH/src/github.com/alastria/monitor
     git pull
     git checkout "$(git describe --tags `git rev-list --tags --max-count=1`)"
-    glide up
+    #glide up
+    dep ensuere
 fi
 
 if ( [ "stop" == "$1" ]); then
